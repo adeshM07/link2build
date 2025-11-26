@@ -1,0 +1,36 @@
+#innerBanner::before{
+  content: "";
+  background: url('./assets/l2bBanner5.png');
+  height: 50vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  background-size: cover;
+  z-index: -1;
+}
+
+@media (min-width:750px) and (max-width:1024px){
+  #innerBanner::before{
+  content: "";
+  background: url('./assets/l2bBanner5.png');
+  height: 35vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  background-size: cover;
+  z-index: -1;
+}
+}
+
+@media  (max-width:730px){
+  #innerBanner::before{
+  content: "";
+  background: url('./assets/l2bBanner5.png');
+  height: 45vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  background-size: cover;
+  z-index: -1;
+}
+}
