@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import { useState } from "react";
 import easy from "./assets/easy.png";
 import equip from "./assets/equip.png";
 import fast from "./assets/fast.png";
@@ -12,6 +13,33 @@ import app2 from "./assets/app2.png";
 import play2 from "./assets/play2.png";
 
 const Landing = () => {
+  const [email, setEmail] = useState("");
+
+  const handleNotify = () => {
+    if (!email.trim()) {
+      alert("Please fill the field");
+      return;
+    }
+
+    const url =
+      "https://script.google.com/macros/s/AKfycbxtcJDjfOltncNzQsZ7j0m3m5AlAS9LBu8JFB4UFN9l0ak7G97d-0PLp2psRhmiJNbM/exec";
+
+    fetch(url, {
+      method: "POST",
+      mode: "no-cors",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: `Email=${encodeURIComponent(email)}`,
+    })
+      .then(() => {
+        alert("Thank you! We’ll notify you soon.");
+        setEmail("");
+      })
+      .catch((err) => {
+        alert("Something went wrong. Try again");
+        console.error(err);
+      });
+  };
+
   const features = [
     {
       icon: material,
@@ -120,17 +148,17 @@ const Landing = () => {
           </div>
         </div>
 
-        <div className="md:h-screen [@media(min-width:1024px)]:h-screen  lg:h-full bg-[#37393C] py-5">
+        <div className="md:h-screen [@media(min-width:1024px)_and_(max-width:1535px)]:h-screen  lg:h-full bg-[#37393C] py-5">
           <div className="w-screen  flex gap-y-10 md:gap-y-0 flex-col md:flex-row place-items-center [@media(min-width:1024px)]:gap-10  md:justify-between lg:py-10 py-5  px-4 lg:px-15">
             {features.map((feature) => (
               <div
                 key={feature.title}
-                className="bg-[#FBC839] text-black  shadow-xl flex flex-col items-center justify-center text-center gap-2 rounded-md transition duration-300 hover:shadow-2xl hover:scale-[1.02] [@media(min-width:1024px)]:w-[30vw] [@media(min-width:1024px)]:h-[15vh] lg:w-[22vw] w-[76%] h-[20vh] md:w-[22vw] md:h-[14vh] lg:h-[35vh]"
+                className="bg-[#FBC839] text-black  shadow-xl flex flex-col items-center justify-center text-center gap-2 rounded-md transition duration-300 hover:shadow-2xl hover:scale-[1.02] [@media(min-width:1024px)_and_(max-width:1535px)]:w-[30vw] [@media(min-width:1024px)_and_(max-width:1535px)]:h-[15vh] lg:w-[22vw] w-[76%] h-[20vh] md:w-[22vw] md:h-[14vh] lg:h-[35vh]"
               >
                 <img
                   src={feature.icon}
                   alt=""
-                  className="h-[5vh] md:h-[4vh] [@media(min-width:1024px)]:h-[5vh] lg:h-[10vh]"
+                  className="h-[5vh] md:h-[4vh] [@media(min-width:1024px)_and_(max-width:1535px)]:h-[5vh] lg:h-[10vh]"
                 />
                 <h3 className="text-xl [@media(min-width:1024px)]:text-[1.5rem] lg:text-[2rem] font-bold mb-1">
                   {feature.title}
@@ -148,11 +176,19 @@ const Landing = () => {
               </p>
               <div className="flex gap-2">
                 <input
-                  type="text"
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   className="rounded-sm w-[40vw] md:w-[27vw] lg:w-[14vw] px-2 py-1 bg-white "
                   placeholder="Enter your email address"
                 />
-                <button className="rounded-sm text-[1rem] px-4 py-2 bg-[#FBC839] font-semibold">
+                <button
+                  onClick={handleNotify}
+                  className="rounded-sm text-[1rem] px-4 py-2 bg-[#FBC839] font-semibold
+                   transition-all duration-300 ease-in-out
+                   hover:scale-105 hover:shadow-[0_0_15px_rgba(251,200,57,0.8)]
+                   active:scale-95 animate-pulse"
+                >
                   Notify Me
                 </button>
               </div>
