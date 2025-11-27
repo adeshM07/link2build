@@ -80,7 +80,7 @@ const handleNotify = () => {
      h-[43vh]
 
      md:h-[33vh]
-     xl:h-[52vh]
+     xl:h-[53vh]
     lg:h-[47vh]
 
     bg-transparent
