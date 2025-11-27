@@ -5,6 +5,12 @@ import equip from "./assets/equip.png";
 import fast from "./assets/fast.png";
 import material from "./assets/material.png";
 
+import app from "./assets/app.png";
+import play from "./assets/play.png";
+
+import app2 from "./assets/app2.png";
+import play2 from "./assets/play2.png";
+
 const Landing = () => {
   const features = [
     {
@@ -33,7 +39,7 @@ const Landing = () => {
       <div className=" ">
         <div
           id="innerBanner"
-          className="  leading-10 h-[45vh]  md:h-[35vh] lg:h-[50vh] flex flex-col justify-end"
+          className="  leading-10 h-[45vh]   md:h-[35vh] lg:h-[50vh] flex flex-col justify-end"
         >
           <div
             id="innerDiv"
@@ -79,40 +85,54 @@ const Landing = () => {
                 From TMT bars to excavators, cement to cranes – everything you
                 need, one platform.
               </p>
-              <button
-                className="
-    bg-[#FDC000] mt-5 text-black font-bold
-    py-3 px-6
-    text-sm sm:text-base md:text-lg
-    rounded-lg
+              {/* <div className="flex justify-center">
+                <p className="text-4xl font-semibold mr-3">Coming Soon on</p>
+                <img src={play} alt="" className="h-[5vh] mr-1" />
+                <img src={app} alt="" className="h-[5vh]" />
+             </div> */}
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 md:gap-4 lg:gap-5 w-full text-center">
+                <p
+                  className="font-semibold 
+     text-lg 
+     xs:text-xl 
+     sm:text-2xl 
+     md:text-3xl 
+     lg:text-3xl 
+     xl:text-5xl"
+                >
+                  Coming Soon on
+                </p>
 
-    shadow-[0_4px_15px_rgba(0,0,0,0.25)] 
-    hover:shadow-[0_10px_25px_rgba(253,192,0,0.5)] 
-    transition duration-300 transform hover:scale-105
-
-    w-auto min-w-fit
-    whitespace-nowrap
-  "
-              >
-                Coming Soon...
-              </button>
+                <div className="flex justify-center items-center gap-2 sm:gap-3 md:gap-4">
+                  <img
+                    src={play2}
+                    alt="Play Store"
+                    className="h-[3.5vh] sm:h-[4vh] md:h-[5vh] lg:h-[5.5vh] xl:h-[6vh] object-contain"
+                  />
+                  <img
+                    src={app2}
+                    alt="App Store"
+                    className="h-[3.5vh] sm:h-[4vh] md:h-[5vh] lg:h-[5.5vh] xl:h-[6vh] object-contain"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="h-full bg-[#37393C] py-5">
-          <div className="w-screen flex gap-y-10 md:gap-y-0 flex-col md:flex-row place-items-center  md:justify-between lg:py-10 py-5  px-4 lg:px-15">
+        <div className="md:h-screen [@media(min-width:1024px)]:h-screen  lg:h-full bg-[#37393C] py-5">
+          <div className="w-screen  flex gap-y-10 md:gap-y-0 flex-col md:flex-row place-items-center [@media(min-width:1024px)]:gap-10  md:justify-between lg:py-10 py-5  px-4 lg:px-15">
             {features.map((feature) => (
               <div
                 key={feature.title}
-                className="bg-[#FBC839] text-black  shadow-xl flex flex-col items-center justify-center text-center gap-2 rounded-md transition duration-300 hover:shadow-2xl hover:scale-[1.02] lg:w-[22vw] w-[76%] h-[20vh] md:w-[22vw] md:h-[14vh] lg:h-[35vh]"
+                className="bg-[#FBC839] text-black  shadow-xl flex flex-col items-center justify-center text-center gap-2 rounded-md transition duration-300 hover:shadow-2xl hover:scale-[1.02] [@media(min-width:1024px)]:w-[30vw] [@media(min-width:1024px)]:h-[15vh] lg:w-[22vw] w-[76%] h-[20vh] md:w-[22vw] md:h-[14vh] lg:h-[35vh]"
               >
                 <img
                   src={feature.icon}
                   alt=""
-                  className="h-[5vh] md:h-[4vh] lg:h-[10vh]"
+                  className="h-[5vh] md:h-[4vh] [@media(min-width:1024px)]:h-[5vh] lg:h-[10vh]"
                 />
-                <h3 className="text-xl lg:text-[2rem] font-bold mb-1">
+                <h3 className="text-xl [@media(min-width:1024px)]:text-[1.5rem] lg:text-[2rem] font-bold mb-1">
                   {feature.title}
                 </h3>
                 <p className="px-2 text-sm lg:text-base text-gray-800 font-medium">
