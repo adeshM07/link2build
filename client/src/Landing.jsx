@@ -78,7 +78,7 @@ const handleNotify = () => {
     px-5
      md:px-12
      h-[43vh]
-     [@media(min-width:1024px)_and_(max-width:1290px)]:h-[43vh]
+
      md:h-[33vh]
     lg:h-[47vh]
 
