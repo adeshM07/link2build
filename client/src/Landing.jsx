@@ -66,7 +66,7 @@ const handleNotify = () => {
       <div className=" ">
         <div
           id="innerBanner"
-          className=" leading-10 h-[45vh]   md:h-[35vh]  xl:h-[55vh] lg:h-[50vh] flex flex-col justify-end"
+          className=" leading-10 h-[45vh] w-screen   md:h-[35vh]  xl:h-[55vh] lg:h-[50vh] flex flex-col justify-end"
         >
           <div
             id="innerDiv"
@@ -149,7 +149,7 @@ const handleNotify = () => {
           </div>
         </div>
 
-        <div className="md:h-screen  [@media(min-width:1024px)_and_(max-width:1535px)]:h-screen  lg:h-full bg-[#37393C] py-5">
+        <div className="md:h-screen  [@media(min-width:1024px)_and_(max-width:1535px)]:h-screen  lg:h-full bg-[#37393C] py-5 w-screen">
           <div className="w-screen  flex gap-y-10 md:gap-y-0 flex-col md:flex-row place-items-center [@media(min-width:1024px)]:gap-10  md:justify-between lg:py-10 py-5  px-4 lg:px-15">
             {features.map((feature) => (
               <div

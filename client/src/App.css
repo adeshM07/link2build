@@ -2,7 +2,7 @@
   content: "";
   background: url('./assets/l2bBanner5.png');
   height: 50vh;
-  width: 100%;
+  width: 100vw;
   background-repeat: no-repeat;
   position: absolute;
   background-size: cover;
@@ -14,7 +14,7 @@
   content: "";
   background: url('./assets/l2bBanner5.png');
   height: 35vh;
-  width: 100%;
+  width: 100vw;
   background-repeat: no-repeat;
   position: absolute;
   background-size: cover;
@@ -27,7 +27,7 @@
   content: "";
   background: url('./assets/l2bBanner5.png');
   height: 55vh;
-  width: 100%;
+  width: 100vw;
   background-repeat: no-repeat;
   position: absolute;
   background-size: cover;
@@ -39,7 +39,7 @@
   content: "";
   background: url('./assets/l2bBanner5.png');
   height: 55vh;
-  width: 100%;
+  width: 100vw;
   background-repeat: no-repeat;
   position: absolute;
   background-size: cover;
@@ -52,7 +52,7 @@
   content: "";
   background: url('./assets/l2bBanner5.png');
   height: 45vh;
-  width: 100%;
+  width: 100vw;
   background-repeat: no-repeat;
   position: absolute;
   background-size: cover;
