@@ -66,7 +66,7 @@ const handleNotify = () => {
       <div className=" ">
         <div
           id="innerBanner"
-          className="border-2 border-red-500  leading-10 h-[45vh]   md:h-[35vh] lg:h-[50vh] flex flex-col justify-end"
+          className=" leading-10 h-[45vh]   md:h-[35vh]  xl:h-[55vh] lg:h-[50vh] flex flex-col justify-end"
         >
           <div
             id="innerDiv"
