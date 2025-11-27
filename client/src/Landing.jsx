@@ -127,7 +127,7 @@ const handleNotify = () => {
      sm:text-2xl 
      md:text-3xl 
      lg:text-3xl 
-     xl:text-5xl"
+     xl:text-4xl"
                 >
                   Coming Soon on
                 </p>
