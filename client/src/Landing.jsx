@@ -78,6 +78,7 @@ const handleNotify = () => {
     px-5
      md:px-12
      h-[43vh]
+     [@media(min-width:1024px)_and_(max-width:1290px)]:h-[45vh]
      md:h-[33vh]
     lg:h-[47vh]
 
@@ -100,7 +101,7 @@ const handleNotify = () => {
 
             {/* Content */}
             <div className="relative z-10">
-              <p className="text-6xl lg:text-8xl font-black mb-2 leading-none">
+              <p className="text-6xl md:text-4xl lg:text-8xl font-black mb-2 leading-none">
                 Link2Build
               </p>
               <p className="text-xl lg:text-2xl font-semibold mb-6">
@@ -147,7 +148,7 @@ const handleNotify = () => {
           </div>
         </div>
 
-        <div className="md:h-screen [@media(min-width:1024px)_and_(max-width:1535px)]:h-screen  lg:h-full bg-[#37393C] py-5">
+        <div className="md:h-screen  [@media(min-width:1024px)_and_(max-width:1535px)]:h-screen  lg:h-full bg-[#37393C] py-5">
           <div className="w-screen  flex gap-y-10 md:gap-y-0 flex-col md:flex-row place-items-center [@media(min-width:1024px)]:gap-10  md:justify-between lg:py-10 py-5  px-4 lg:px-15">
             {features.map((feature) => (
               <div
