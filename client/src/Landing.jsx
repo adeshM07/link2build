@@ -15,30 +15,29 @@ import play2 from "./assets/play2.png";
 const Landing = () => {
   const [email, setEmail] = useState("");
 
-  const handleNotify = () => {
-    if (!email.trim()) {
-      alert("Please fill the field");
-      return;
-    }
+const handleNotify = () => {
+  if (!email.trim()) {
+    alert("Please fill the field");
+    return;
+  }
 
-    const url =
-      "https://script.google.com/macros/s/AKfycbxtcJDjfOltncNzQsZ7j0m3m5AlAS9LBu8JFB4UFN9l0ak7G97d-0PLp2psRhmiJNbM/exec";
+  const url = "https://script.google.com/macros/s/AKfycbxtcJDjfOltncNzQsZ7j0m3m5AlAS9LBu8JFB4UFN9l0ak7G97d-0PLp2psRhmiJNbM/exec";
 
-    fetch(url, {
-      method: "POST",
-      mode: "no-cors",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: `Email=${encodeURIComponent(email)}`,
-    })
-      .then(() => {
-        alert("Thank you! We’ll notify you soon.");
-        setEmail("");
-      })
-      .catch((err) => {
-        alert("Something went wrong. Try again");
-        console.error(err);
-      });
-  };
+  fetch(url, {
+    method: "POST",
+    mode: "no-cors",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: `Email=${encodeURIComponent(email)}`
+  })
+  .then(() => {
+    alert("Thank you! We’ll notify you soon.");
+    setEmail("");
+  })
+  .catch((err) => {
+    alert("Something went wrong. Try again");
+    console.error(err);
+  });
+};
 
   const features = [
     {
@@ -153,12 +152,12 @@ const Landing = () => {
             {features.map((feature) => (
               <div
                 key={feature.title}
-                className="bg-[#FBC839] text-black  shadow-xl flex flex-col items-center justify-center text-center gap-2 rounded-md transition duration-300 hover:shadow-2xl hover:scale-[1.02] [@media(min-width:1024px)_and_(max-width:1535px)]:w-[30vw] [@media(min-width:1024px)_and_(max-width:1535px)]:h-[15vh] lg:w-[22vw] w-[76%] h-[20vh] md:w-[22vw] md:h-[14vh] lg:h-[35vh]"
+                className="bg-[#FBC839] text-black  shadow-xl flex flex-col items-center justify-center text-center gap-2 rounded-md transition duration-300 hover:shadow-2xl hover:scale-[1.02] [@media(min-width:1024px)_and_(max-width:1270px)]:w-[30vw] [@media(min-width:1024px)_and_(max-width:1270px)]:h-[15vh] lg:w-[22vw] w-[76%] h-[20vh] md:w-[22vw] md:h-[14vh] lg:h-[35vh]"
               >
                 <img
                   src={feature.icon}
                   alt=""
-                  className="h-[5vh] md:h-[4vh] [@media(min-width:1024px)_and_(max-width:1535px)]:h-[5vh] lg:h-[10vh]"
+                  className="h-[5vh] md:h-[4vh] [@media(min-width:1024px)_and_(max-width:1270px)]:h-[5vh] lg:h-[10vh]"
                 />
                 <h3 className="text-xl [@media(min-width:1024px)]:text-[1.5rem] lg:text-[2rem] font-bold mb-1">
                   {feature.title}
