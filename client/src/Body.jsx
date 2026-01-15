@@ -112,7 +112,7 @@ const Body = () => {
         {/* Social Icons */}
         <div className="mt-8 sm:mt-10 flex justify-center gap-3 sm:gap-4">
           <a
-            href="#"
+            href="https://www.linkedin.com/company/link2build-technologies-private-limited/?viewAsMember=true"
             className="w-10 h-10 sm:w-11 sm:h-11 rounded-full border border-gray-400 flex items-center justify-center text-gray-700 hover:bg-black hover:text-white transition"
           >
             <Linkedin size={18} className="sm:hidden" />
