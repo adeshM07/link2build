@@ -1,6 +1,6 @@
 import React from "react";
 import bg from "./assets/l2b_bgIMG2.png";
-// import logo from "../assets/l2bLogo.png";
+import logo from "./assets/l2b_web_Logo2.png";
 import appStore from "./assets/appStoreLogo.png";
 import playStore from "./assets/playStoreLogo.png";
 import { useState, useEffect } from "react";
@@ -49,16 +49,20 @@ const Body = () => {
         {/* <img
           src={logo}
           alt="Link 2 Build"
-          className="logo-pixel-wrapper mx-auto w-[220px] sm:w-[220px] md:w-[427px] md:h-[187px]"
+          className="logo-pixel-wrapper mx-auto w-[220px] sm:w-[220px] md:w-[427px] md:h-[187px] lg:w-[60%] lg:h-[150px] "
         /> */}
-        <video
+        <div className="flex flex-col leading-tight">
+        <h1 className="exo-bold text-[#1F1F1F] text-[3rem] md:text-[5rem]">LINK <span className="text-[#FEA405]">2</span> Build</h1>
+        <p className="exo-semi-regular text-[1rem] md:text-[24px] text-[#4B4B4B]">EVERY SITE , ONE SOLUTION</p>
+        </div>
+        {/* <video
           src={l2bVideo}
           autoPlay
           loop
           muted
           playsInline
           className="mx-auto w-[220px] sm:w-[220px] md:w-[427px] md:h-[187px]"
-        ></video>
+        ></video> */}
 
         {/* Description */}
         <p className="mt-4 exo-medium sm:mt-8 text-[#4B4B4B] text-sm sm:text-base md:text-2xl leading-relaxed font-exo">

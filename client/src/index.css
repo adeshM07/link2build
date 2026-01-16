@@ -1,1 +1,26 @@
 @import "tailwindcss";
+
+.exo-medium {
+  font-family: "Exo", sans-serif;
+  font-weight: 500;
+  font-style:normal;
+}
+
+.exo-semi-regular {
+  font-family: "Exo", sans-serif;
+  font-weight: 400;
+  font-style:normal;
+}
+
+.exo-regular {
+  font-family: "Exo", sans-serif;
+  font-weight: 600;
+  font-style:normal;
+}
+
+
+.exo-bold {
+  font-family: "Exo", sans-serif;
+  font-weight: 700;
+  font-style:normal;
+}
