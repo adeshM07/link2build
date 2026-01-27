@@ -37,14 +37,14 @@ const Body = () => {
   };
   return (
     <div
-      className="relative min-h-screen w-full bg-cover bg-center flex items-center justify-center px-4 sm:px-6"
+      className="relative min-h-screen w-full bg-cover bg-center flex items-center justify-center px-4 sm:px-6 "
       style={{ backgroundImage: `url(${bg})` }}
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-white/80"></div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-3xl w-full text-center px-2 sm:px-0">
+      <div className="relative z-10 max-w-3xl w-full text-center px-2 sm:px-0  lg:mt-14">
         {/* Logo */}
         {/* <img
           src={logo}
